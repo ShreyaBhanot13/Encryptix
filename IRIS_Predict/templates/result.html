@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('/static/img/f1.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Cormorant', serif;
+        }
+
+        .result-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-family: 'EB Garamond', serif;
+            font-size: 32px;
+        }
+
+        .result-message {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .result-image {
+            max-width: 100%;
+            border-radius: 15px;
+        }
+
+        .back-link {
+            margin-top: 20px;
+            display: block;
+            font-size: 18px;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #9861ac;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>The Prediction is:</h1>
+        <div class="result-message">{{ prediction_message }}</div>
+        <img class="result-image" src="{{ image_path }}" alt="Iris Flower">
+        <a class="back-link" href="/">Back to Home</a>
+    </div>
+</body>
+</html>

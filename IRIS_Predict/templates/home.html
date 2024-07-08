@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IRIS Flower Classification</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #d4a3ae;
+            background-image: url('/static/img/f1.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Cormorant', serif;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 450px;
+            height: 600px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-container b {
+            display: inline-block;
+            width: 120px;
+            text-align: left;
+            font-size: 18px;
+        }
+
+        .form-container input[type="text"] {
+            margin: 10px 0;
+            padding: 10px;
+            width: calc(100% - 140px);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #333;
+            transition: box-shadow 0.3s ease;
+            font-size: 16px;
+        }
+
+        .form-container input[type="text"]:hover {
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .form-container input[type="submit"] {
+            margin: 10px 0;
+            padding: 12px;
+            width: calc(100% - 24px);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 18px;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #9861ac;
+            color: white;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-family: 'EB Garamond', serif;
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>IRIS FLOWER CLASSIFICATION</h1>
+        <form method="POST" action="/predict">
+            <b>Sepal length:</b> <input type="text" name="a" required><br><br>
+            <b>Sepal width:</b> <input type="text" name="b" required><br><br>
+            <b>Petal length:</b> <input type="text" name="c" required><br><br>
+            <b>Petal width:</b> <input type="text" name="d" required><br><br><br>
+            <input type="submit" value="Predict!">
+        </form>
+    </div>
+</body>
+</html>
